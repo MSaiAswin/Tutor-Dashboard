@@ -11,9 +11,61 @@
 
   </head>
 
-  <body style="background-image: url('../../static/images/CT3.jpeg'); background-repeat: no-repeat; background-size: cover;">
+  <body style="background-image: url('../../static/images/CT3.jpeg'); background-repeat: no-repeat; background-size: cover; height:100%">
 
-    <h1>VERIFY</h1>
+    <br>
+
+    {% with messages = get_flashed_messages(with_categories = True) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          {% if category == 'error' %}
+            <div class="alert alert-danger alert-dismissible fade show rounded col-8 container border border-danger" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          {% else %}
+            <div class="alert alert-success alert-dismissible fade show rounded col-8 container border border-success" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <br><br>
+    <div style="background-color:rgba(255,255,255,.5); border-radius:10px" class="container col-md-8 col-lg-6  border border-dark ">
+      <form  method="post">
+        <h2 align="center">Verify User</h2>
+        <p align="center">Enter email & password to continue.</p>
+        <hr><br>
+
+        <div class="form-group">
+
+          <div class="row">
+            <label class="col-2" for="email">Email</label>
+            <div class="col-10">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <label class="col-2" for="password">Password</label>
+            <div class="col-10">
+              <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+            </div>
+          </div>
+
+          <br>
+
+          <button class="btn btn-primary" type="submit" name="submit">Submit</button>
+          <br><br>
+
+        </div>
+      </form>
+    </div>
 
 
     <!-- JavaScript Bundle with Popper -->
