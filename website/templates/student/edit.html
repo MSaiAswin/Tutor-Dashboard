@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Student Details{% endblock %}
+
+{% block body %}
+
+<div class="container col-4">
+<h2>Edit Existing Student Details</h2>
+<p>Fill form and submit to edit existing student.</p>
+<br><br>
+    <form method="POST">
+
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="name">Name</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="name" name="name" placeholder="Enter the name of the student" type="text" class="form-control" value="{{student.name}}" required="required">
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label for="phone" class="col-4 col-form-label">Phone Number</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="phone" name="phone" value="{{student.phone}}" placeholder="Enter the phone number of the student" type="text" class="form-control" required="required">
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">Email</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="email" value="{{student.email}}" name="email" placeholder="Enter the email of the student" type="email" class="form-control" >
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="school">School</label>
+    <div class="col-8">
+    <select style="width:100%;" id="school" name="school" class="custom-select rounded">
+      <option value="">Select School</option>
+      <option value="Our Own English High School">Our Own English High School</option>
+      <option value="St. Marys Catholic High School">St. Mary's Catholic High School</option>
+      <option value="Eminence Private School">Eminence Private School</option>
+      <option value="Indian School">Indian School</option>
+      <option value="Other">Other</option>
+    </select>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label for="dob" class="col-4 col-form-label">Date of Birth</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="dob" value="{{student.dob}}" name="dob" placeholder="Enter the DOB of the student" type="date" class="form-control" required="required">
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+  <input type="hidden" id="id" name="id" value="{{student.id}}">
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="batch">Batch</label>
+    <div class="col-8">
+    <select style="width:100%;" id="batch" name="batch" class="custom-select rounded ">
+    <option value="" >Select Batch</option>
+    {% for batch in batches %}
+      <<option value="{{batch.name}}">{{batch.name}}</option>
+    {% endfor %}
+
+    </select>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <div class=" col-8">
+    <button name="submit" type="submit" value="edit" class="btn btn-primary">Edit Student</button>
+
+    <a class="btn btn-primary" href="/manage/student/edit">Back</a>
+    </div>
+  </div>
+  </form>
+</div>
+
+
+<script type="text/javascript">
+  document.getElementById('school').value = '{{student.school}}';
+  document.getElementById('batch').value = '{{batch}}';
+</script>
+
+{% endblock %}

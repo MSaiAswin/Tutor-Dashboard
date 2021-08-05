@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Remove Student{% endblock %}
+
+{% block body %}
+
+<br>
+
+
+
+    <div class="container col-4">
+		<h2>Student Details</h2>
+		<p>Check the student details before removing the student.</p>
+		<br>
+
+
+
+		<h4>Name: {{student.name}}</h4>
+        <h4>Phone Number: {{student.phone}}</h4>
+        <h4>Email: {{student.email}}</h4>
+        <h4>School: {{student.school}}</h4>
+        <h4>DOB: {{student.dob}}</h4>
+        <h4>Batch: {{student.batch.name}}</h4>
+
+		<br>
+
+        <form method="POST">
+            <div class="form-group row">
+                <label style="font-size:125%" class="col-4">Confirm</label>
+                <div class="col-8">
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input  name="confirm_name" id="confirm_name" type="checkbox" class="custom-control-input" value="{{student.id}}" required="required">
+                        <label for="confirm_name" class="custom-control-label"></label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-group row">
+                <div class=" col-8 flex">
+                    <button type="submit" name="submit" class="btn btn-primary">Remove</button>
+
+                    <a class="btn btn-danger" href="/manage/student/remove">Cancel</a>
+                </div>
+            </div>
+		</form>
+    </div>
+
+{% endblock %}

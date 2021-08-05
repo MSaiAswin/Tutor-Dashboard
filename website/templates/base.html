@@ -5,13 +5,25 @@
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <style>
+    .select2-container .select2-selection--single{height:34px !important;}
+    .select2-container--default .select2-selection--single{
+        border: 1px solid #ccc !important;
+        border-radius: 0px !important;
+    }
+
+    </style>
 
     <title>{% block title %} {% endblock %}</title>
 
   </head>
 
   <body style="background-image: url('../../static/images/CT3.jpeg'); background-repeat: no-repeat; background-size: cover;">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -22,10 +34,13 @@
           <div class="navbar-nav">
             <a href="/manage/home" class="navbar-brand">Manage</a>
             <a href="/manage/test" class="nav-item nav-link">Test</a>
-            <a href="#" class="nav-item nav-link">Student Management</a>
+            <a href="/manage/student" class="nav-item nav-link">Student Management</a>
             <a href="#" class="nav-item nav-link">Batch Management</a>
             <a href="#" class="nav-item nav-link">Fee Management</a>
           </div>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <a  href="/logout" class="btn btn-danger">Logout</a>
         </div>
       </div>
     </nav>
@@ -57,6 +72,11 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        $('.select2').select2();
+    </script>
+
 
   </body>
 

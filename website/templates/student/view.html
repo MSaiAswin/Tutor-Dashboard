@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}View Student Details{% endblock %}
+
+{% block body %}
+
+<br>
+
+
+
+    <div class="container col-4">
+		<h2>View Student Details</h2>
+		<br>
+
+
+
+		<h4>Name: {{student.name}}</h4>
+        <h4>Phone Number: {{student.phone}}</h4>
+        <h4>Email: {{student.email}}</h4>
+        <h4>School: {{student.school}}</h4>
+        <h4>DOB: {{student.dob}}</h4>
+        <h4>Batch: {{batch}}</h4>
+
+		<br>
+
+    <a class="btn btn-primary" href="/manage/student/view">Back</a>
+
+    <a class="btn btn-primary" href="/manage/student">Close</a>
+
+{% endblock %}

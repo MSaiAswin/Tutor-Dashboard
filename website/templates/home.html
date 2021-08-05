@@ -2,4 +2,54 @@
 
 {% block title %}Home{% endblock %}
 
-{% block body %}<h1>Welcome {{name}}!</h1>{% endblock %}
+{% block body %}
+
+<div class="container">
+  <h2>Greetings {{name}}!</h2>
+  <h4>Welcome to Ganamrutham Class Manager.</h4>
+  <br><hr>
+</div>
+
+<div class="container text-center">
+  <br>
+  <h3>Manager</h3>
+  <br><br><br>
+  <div class="row d-flex justify-content-around">
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Student Management</h5>
+        <hr>
+        <p>Manage Student Details - Add, Remove, Edit and View Student details. </p>
+        <a href="/manage/student" class="btn btn-primary">Manage</a>
+      </div>
+    </div>
+
+
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Batch Management</h5>
+        <hr>
+        <p>Manage Batch Details - Add, Remove, Edit and View Batch details. </p>
+        <a href="#" class="btn btn-primary">Manage</a>
+      </div>
+    </div>
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Fee Management</h5>
+        <hr>
+        <p>Manage Fee Details - Add, Remove, Edit and View Fee details. </p>
+        <a href="#" class="btn btn-primary">Manage</a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+{% endblock %}

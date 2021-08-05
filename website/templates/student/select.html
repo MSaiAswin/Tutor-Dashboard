@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Student{% endblock %}
+
+{% block body %}
+
+
+
+<br>
+
+
+
+    <div class="container col-4">
+		<h2>Select Student</h2>
+		<p>Select the student below to perform the action.</p>
+		<br><br>
+        <form method="POST">
+
+
+			<div class="form-group row">
+			  <label class="col-4 col-form-label" for="name">Name</label>
+			  <div class="col-8">
+				<select style="width:100%;" id="name" name="name" class="form-control select2" required>
+				  <option value="" >Select Name</option>
+				  {% for student in students %}
+            <<option value="{{student.id}}">{{student.name}}</option>
+          {% endfor %}
+
+				</select>
+
+			  </div>
+			</div>
+
+
+			<br>
+
+
+			<div class="form-group row">
+			  <div class=" col-8">
+				<button name="submit" type="submit" value='select' class="btn btn-primary">Select</button>
+
+				<a class="btn btn-primary" href="/manage/student">Back</a>
+			  </div>
+			</div>
+		  </form>
+    </div>
+
+
+
+{% endblock %}

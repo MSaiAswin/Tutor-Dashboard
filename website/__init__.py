@@ -18,7 +18,7 @@ def create_app():
     app.register_blueprint(views, url_prefix = '/manage')
     app.register_blueprint(auth, url_prefix = '/')
 
-    from .models import User
+    from .models import User, Batch, Student
 
 
     create_database(app)

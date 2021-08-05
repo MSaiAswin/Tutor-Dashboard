@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Management{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h2>Student Management</h2>
+  <h4>Manage student details here.</h4>
+  <br><hr>
+</div>
+
+<div class="container text-center">
+  <br>
+
+  <br><br><br>
+  <div class="row d-flex justify-content-around">
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Add New Student</h5>
+        <hr>
+        <p>Add a new Student to the student list.</p>
+        <a href="/manage/student/add" class="btn btn-primary">Add</a>
+      </div>
+    </div>
+
+
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Remove Student</h5>
+        <hr>
+        <p>Remove an existing student from the student list. </p>
+        <a href="/manage/student/remove" class="btn btn-primary">Remove</a>
+      </div>
+    </div>
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">Edit Student Details</h5>
+        <hr>
+        <p>Edit the details of an existing student. </p>
+        <a href="/manage/student/edit" class="btn btn-primary">Edit</a>
+      </div>
+    </div>
+
+    <div class="card" style="width : 18rem; background-color:rgba(255,255,255,.75)">
+      <div class="card-body">
+        <h5 class="card-title">View Student Details</h5>
+        <hr>
+        <p>View the details of an existing student. </p>
+        <a href="/manage/student/view" class="btn btn-primary">View</a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+{% endblock %}

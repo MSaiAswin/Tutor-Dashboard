@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Student{% endblock %}
+
+{% block body %}
+
+<br><br>
+
+<div style="background-color:rgba(255,255,255,0.5);border-radius:10px" class="container text-center border border-dark col-6">
+  <br>
+  <h4>Who do you want to add?</h4>
+  <hr><br>
+  <form method = "POST">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="choice" id="new" value="new">
+      <label class="form-check-label" for="new">Add New Student</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="choice" id="old" value="old">
+      <label class="form-check-label" for="old">Add Discontinued Student</label>
+    </div>
+
+    <br><br>
+
+    <div>
+      <button class="btn btn-primary" type="submit" name="button">Select</button>
+
+      <a class="btn btn-primary" href="/manage/student">Back</a>
+    </div>
+
+
+  </form>
+  <br>
+</div>
+
+{% endblock %}
