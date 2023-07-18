@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Batch{% endblock %}
+
+{% block body %}
+
+<div class="container col-4">
+<h2>Add New Batch</h2>
+<p>Fill form and submit to add new batch.</p>
+<br><br>
+    <form method="POST">
+
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="name">Batch Name</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="name" name="name" placeholder="Enter the name of the batch" type="text" class="form-control" required="required">
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label for="sunday" class="col-4 col-form-label">Sunday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="sunday" name="sunday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="monday" class="col-4 col-form-label">Monday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="monday" name="monday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="tuesday" class="col-4 col-form-label">Tuesday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="tuesday" name="tuesday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="wednesday" class="col-4 col-form-label">Wednesday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="wednesday" name="wednesday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="thursday" class="col-4 col-form-label">Thursday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="thursday" name="thursday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="friday" class="col-4 col-form-label">Friday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="friday" name="friday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="saturday" class="col-4 col-form-label">Saturday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" id="saturday" name="saturday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+
+  <div class="form-group row">
+    <div class=" col-8">
+    <button name="submit" type="submit" value="new" class="btn btn-primary">Add Batch</button>
+
+    <a class="btn btn-primary" href="/manage/batch">Back</a>
+    </div>
+  </div>
+  </form>
+</div>
+<br><br>
+
+{% endblock %}

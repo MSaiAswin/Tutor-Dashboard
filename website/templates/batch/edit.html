@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Batch Details{% endblock %}
+
+{% block body %}
+
+<div class="container col-4">
+<h2>Edit Existing Batch Details</h2>
+<p>Fill form and submit to edit existing batch.</p>
+<br><br>
+    <form method="POST">
+
+
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="name">Batch Name</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{batch.name}}" id="name" name="name" placeholder="Enter the name of the batch" type="text" class="form-control" required="required">
+    </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="form-group row">
+    <label for="sunday" class="col-4 col-form-label">Sunday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.sunday==time else batch.sunday}}" id="sunday" name="sunday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="monday" class="col-4 col-form-label">Monday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.monday==time else batch.monday}}" id="monday" name="monday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="tuesday" class="col-4 col-form-label">Tuesday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.tuesday==time else batch.tuesday}}" id="tuesday" name="tuesday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="wednesday" class="col-4 col-form-label">Wednesday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.wednesday==time else batch.wednesday}}" id="wednesday" name="wednesday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="thursday" class="col-4 col-form-label">Thursday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.thursday==time else batch.thursday}}" id="thursday" name="thursday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="friday" class="col-4 col-form-label">Friday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.friday==time else batch.friday}}" id="friday" name="friday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="saturday" class="col-4 col-form-label">Saturday (time)</label>
+    <div class="col-8">
+    <div class="input-group">
+      <input style="border: 1px solid;" value="{{'' if batch.saturday==time else batch.saturday}}" id="saturday" name="saturday" type="time" class="form-control">
+    </div>
+    </div>
+  </div>
+
+  <br>
+  <input type="hidden" id="id" name="id" value="{{batch.id}}">
+
+  <div class="form-group row">
+    <div class=" col-8">
+    <button name="submit" type="submit" value="edit" class="btn btn-primary">Edit Batch</button>
+
+    <a class="btn btn-primary" href="/manage/batch">Back</a>
+    </div>
+  </div>
+  </form>
+</div>
+<br><br>
+
+{% endblock %}

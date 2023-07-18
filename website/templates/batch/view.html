@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}View Batch Details{% endblock %}
+
+{% block body %}
+
+<br>
+
+
+
+    <div class="container col-4">
+		<h2>View Batch Details</h2>
+		<br>
+
+
+
+    <h4>Name: {{batch.name}}</h4>
+
+        {% set days = {'Sunday' : batch.sunday, 'Monday' : batch.monday, 'Tuesday' : batch.tuesday, 'Wednesday' : batch.wednesday, 'Thursday' : batch.thursday, 'Friday' : batch.friday, 'Saturday' : batch.saturday} %}
+        {% for day in days %}
+        {% if days[day] != time %}
+        <h4>{{day}}: {{days[day]}}</h4>
+
+        {% endif %}
+        {% endfor %}
+
+		<br>
+
+    <a class="btn btn-primary" href="/manage/batch/view">Back</a>
+
+    <a class="btn btn-primary" href="/manage/batch">Close</a>
+
+{% endblock %}

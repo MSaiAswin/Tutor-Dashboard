@@ -13,13 +13,13 @@ class User(db.Model, UserMixin):
 class Batch(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(50), unique = True)
-    sunday = db.Column(db.String(50), unique = True)
-    monday = db.Column(db.String(50), unique = True)
-    tuesday = db.Column(db.String(50), unique = True)
-    wednesday = db.Column(db.String(50), unique = True)
-    thursday = db.Column(db.String(50), unique = True)
-    friday = db.Column(db.String(50), unique = True)
-    saturday = db.Column(db.String(50), unique = True)
+    sunday = db.Column(db.Time)
+    monday = db.Column(db.Time)
+    tuesday = db.Column(db.Time)
+    wednesday = db.Column(db.Time)
+    thursday = db.Column(db.Time)
+    friday = db.Column(db.Time)
+    saturday = db.Column(db.Time)
     students = db.relationship('Student', backref='batch')
 
 
